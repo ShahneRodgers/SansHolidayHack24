@@ -1,0 +1,116 @@
+# Reference: https://squidfunk.github.io/mkdocs-material/reference/
+site_name: SANS HHC 2024 Write-Up
+site_author: Shahne Rodgers
+theme:
+  icon:
+    # Material for MkDocs bundles several icon sets:
+    # - Material Design (https://materialdesignicons.com/)
+    # - FontAwesome (https://fontawesome.com/search?m=free)
+    # - Octicons (https://octicons.github.com/)
+    # - Simple Icons (https://simpleicons.org/)
+    # Below are some suitable logo examples: 
+    # logo: fontawesome/regular/snowflake
+    # logo: fontawesome/solid/sleigh
+    # logo: fontawesome/solid/candy-cane
+    logo: fontawesome/solid/snowflake
+  name: material
+  favicon: img/misc/favicon.ico
+  features:
+    - toc.integrate
+    - content.code.copy
+    - navigation.sections
+    #- navigation.instant
+    #- navigation.top
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.expand
+    #- navigation.top
+    #- navigation.prune
+    #- toc.follow
+  palette:
+    # Material for MkDocs supports a light (default) and dark (slate) theme.
+    # Each mode supports configurable primary and accent colors.
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    # Primary colors:
+    # red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal,
+    # green, light green, lime, yellow, amber, orange, deep orange, brown,
+    # grey, blue grey, black, and white.
+    # Accent colors:
+    # red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal,
+    # green, light green, lime, yellow, amber, orange, and deep orange.
+    # Palette toggle for light mode
+    - scheme: default
+      primary: amber
+      accent: orange
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ShahneRodgers
+      name: GitHub
+extra_css:
+  - css/extra.css
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - js/tablesort.js
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - meta
+  - footnotes
+  - def_list
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 2
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+# The 'nav' section defines the content of the sidebar navigation.
+- Welcome: 'index.md'
+- Objectives:
+  - Prologue:
+    - Elf Connect: 'objectives/prologue/o1_elf_connect.md'
+    - Elf Minder: 'objectives/prologue/o2_elf_minder.md'
+  - "Act I: Recover the Naughty Nice List": 
+    - Frosty Keypad: 'objectives/act_1/o3_keypad.md'
+    - cURLing: 'objectives/act_1/o4_cURLing.md'
+    - Hardware: 'objectives/act_1/o5_hardware.md'
+  - "Act II: Protect the Naughty Nice List":
+    - Mobile: 'objectives/act_2/o6_mobile.md'
+    - Drone Path: 'objectives/act_2/o7_drone.md'
+    - PowerShell: 'objectives/act_2/o8_powershell.md'
+    - Snowball Showdown: 'objectives/act_2/o9_snowball.md'
+    - KC7: 'objectives/act_2/o10_kc7.md'
+  - "Act III: Restore the Naughty Nice List":
+    - Santa Vision: 'objectives/act_3/o11_santa_vision.md'
+    - Elf Stack: 'objectives/act_3/o12_elf_stack.md'
+    - Decrypt: 'objectives/act_3/o13_decrypt.md'
+    - Deactivate: 'objectives/act_3/o14_deactivate.md'
+- Extras:
+  - Easter Eggs: 'easter_eggs.md'
