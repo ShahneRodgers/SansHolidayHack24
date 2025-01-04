@@ -71,7 +71,7 @@ name is frequently misspelt, I feel for Wombl(e)y 😂
 ## Images
 
 The artwork this year was fantastic. Particularly this propaganda sign:
-![Alabaster is a dootie](../docs/img/propaganda.png)
+![Alabaster is a dootie](./img/propaganda.png)
 
 There are 12 gifs on the North Pole monitoring station (another reference to the 12 days of Christmas?)
 which are all worth looking at.
